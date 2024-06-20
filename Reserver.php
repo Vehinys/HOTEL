@@ -9,7 +9,7 @@ class Reserver {
     function __construct($dateArrivee, $dateDepart)
     {
         $this->$dateArrivee = new DateTime($$dateArrivee); 
-        $this->$dateDepart = new DateTime($dateDepart); 
+        $this->$dateDepart  = new DateTime($dateDepart); 
     }
 
     // GET 

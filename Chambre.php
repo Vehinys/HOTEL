@@ -2,28 +2,26 @@
 
 class Chambre {                                                                         
 
-    private string $numeroDeChambre; 
+    private string $nomChambre; 
     private string $nombreDeLit;
-    private bool $wifi;
+    private bool   $wifi;
     private string $prix;
-    private Hotel $hotel;
+    private Hotel  $hotel;
 
-    function __construct(string $numeroDeChambre, string $nombreDeLit, bool $wifi, string $prix, Hotel $hotel)
+    function __construct(string $nomChambre, string $nombreDeLit, bool $wifi, string $prix, Hotel $hotel)
     {
-        $this-> numeroDeChambre = $numeroDeChambre; 
+        $this-> nomChambre  = $nomChambre; 
         $this-> nombreDeLit = $nombreDeLit;
-        $this-> wifi = $wifi;
-        $this-> prix = $prix;
-        $this-> hotel = $hotel;
-        $this-> hotel -> addChambre ($this);
-        $this-> hotel -> calculChambre ($this);
+        $this-> wifi        = $wifi;
+        $this-> prix        = $prix;
+        $this-> hotel       = $hotel;
     }
 
     // GET 
 
-    public function getNumeroDeChambre()
+    public function getNomChambre()
     {
-        return $this->numeroDeChambre;
+        return $this->nomChambre;
     }
 
     public function getNombreDeLit()
@@ -48,9 +46,9 @@ class Chambre {
 
     // SET 
 
-    public function setNumeroDeChambre()
+    public function setNomChambre()
     {
-        return $this->numeroDeChambre;
+        return $this->nomChambre;
     }
 
     public function setNombreDeLit()

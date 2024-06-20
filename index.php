@@ -10,11 +10,12 @@ include 'Reserver.php';
 // CREATION DE L'HOTEL AVEC LE NOMBRE DES CHAMBRES + LEURS ETATS
 
 $hotel1 = new Hotel("Hilton &#9733;&#9733;&#9733;&#9733;","10 route de la Gare","67000","Strasbourg","0");
-$hotel2 = new Hotel("Regent &#9733;&#9733;&#9733;&#9733;","61 rue Dauphine","75006","Paris","0");
+$hotel2 = new Hotel("Regent &#9733;&#9733;&#9733;&#9733;","61 rue Dauphine","75006","Paris","0"); 
 
 // AFFICHAGE 1
 
 $hotel1->afficherInfoHotel();
+$hotel2->afficherInfoHotel();
 
 // CREATION DES CHAMBRES
 

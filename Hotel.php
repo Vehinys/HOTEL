@@ -4,28 +4,29 @@ class Hotel {
 
     private string $nom; 
     private string $adresse;
-    private int $codePostale;
+    private int    $codePostale;
     private string $ville;
-    private int $nombreDeChambreReserv;
-    private $chambres = [];
+    private int    $nombreDeChambreReserv;
+    private        $chambres = [];
+
 
     function __construct(string $nom, string $adresse, int $codePostale, string $ville, int $nombreDeChambreReserv)
     {
-        $this-> nom = $nom; 
-        $this-> adresse = $adresse;
-        $this-> codePostale = $codePostale;
-        $this-> ville = $ville;
+        $this-> nom                   = $nom; 
+        $this-> adresse               = $adresse;
+        $this-> codePostale           = $codePostale;
+        $this-> ville                 = $ville;
         $this-> nombreDeChambreReserv = $nombreDeChambreReserv;
-        $this-> chambres = [];
     }
 
-    public function addChambre($chambre) {                                         
-        $this->chambres[] = $chambre;                                                  
+    public function addChambres($chambre) {
+        $this->chambres[] = $chambre;
     }
-    
-    public function calculChambre($chambre) {                                         
-        return count($this->$chambre);                                                  
+
+    public function calculChambres($chambre) {
+        return count($this->$chambre);
     }
+
     // GET 
 
     public function getNom()
@@ -85,9 +86,9 @@ class Hotel {
         echo "<h2> {$this->nom} {$this-> ville}  </h2>";
         echo "{$this-> adresse} {$this-> codePostale}  {$this-> ville}<br><br>";
 
-        echo "Nombre de chambres : <br>";
-        echo "Nombre de chambres reservées : {$this-> nombreDeChambreReserv} <br>";
-        echo "Nombre de chambres dispo :  <br>";
+        echo "Nombre de chambres : 0 chambres.<br>"; 
+        echo "Nombre de chambres reservées : {$this-> nombreDeChambreReserv} chambres.<br>";
+        echo "Nombre de chambres disponibles :  0 chambres.<br>";
 
     }
 }
