@@ -1,15 +1,17 @@
 <?php
 
-class Client {                                                                         // CREE UNE CLASS APPELE "PAYS" ET VONT STOCKER LES ATTRIBUTS DANS LA CLASS "PAYS"
+class Client {                                                                         
 
     private string $nom; 
     private string $prenom;
+    private Hotel  $hotel;
 
 
-    function __construct(string $nom, string $prenom)
+    function __construct(string $nom, string $prenom, hotel $hotel)
     {
         $this-> nom    = $nom; 
         $this-> prenom = $prenom;
+        $this-> hotel  = $hotel;
     }
 
     // GET 
@@ -23,6 +25,11 @@ class Client {                                                                  
     {
         return $this->prenom;
     }
+
+    public function getHotel()
+    {
+        return $this->hotel;
+    }
     
     // SET 
 
@@ -34,6 +41,11 @@ class Client {                                                                  
     public function setPrenom()
     {
         return $this->prenom;
+    }
+
+    public function setHotel()
+    {
+        return $this->hotel;
     }
 
 }

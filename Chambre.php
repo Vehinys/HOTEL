@@ -8,67 +8,63 @@ class Chambre {
     private string $prix;
     private Hotel  $hotel;
 
-    function __construct(string $nomChambre, string $nombreDeLit, bool $wifi, string $prix, Hotel $hotel)
-    {
-        $this-> nomChambre  = $nomChambre; 
-        $this-> nombreDeLit = $nombreDeLit;
-        $this-> wifi        = $wifi;
-        $this-> prix        = $prix;
-        $this-> hotel       = $hotel;
+
+    function __construct(string $nomChambre, string $nombreDeLit, bool $wifi, string $prix, Hotel $hotel) {
+
+        $this  -> nomChambre  = $nomChambre; 
+        $this  -> nombreDeLit = $nombreDeLit;
+        $this  -> wifi        = $wifi;
+        $this  -> prix        = $prix;
+        $this  -> hotel       = $hotel;
+        $hotel -> addChambre($this);
     }
+
 
     // GET 
 
-    public function getNomChambre()
-    {
+    public function getNomChambre() {
         return $this->nomChambre;
     }
 
-    public function getNombreDeLit()
-    {
+    public function getNombreDeLit() {
         return $this->nombreDeLit;
     }
 
-    public function getWifi()
-    {
+    public function getWifi() {
         return $this->wifi;
     }
 
-    public function getPrix()
-    {
+    public function getPrix() {
         return $this->prix;
     }
 
-    public function getHotel()
-    {
+    public function getHotel() {
         return $this->hotel;
     }
 
     // SET 
 
-    public function setNomChambre()
-    {
+    public function setNomChambre() {
         return $this->nomChambre;
     }
 
-    public function setNombreDeLit()
-    {
+    public function setNombreDeLit() {
         return $this->nombreDeLit;
     }
 
-    public function setWifi()
-    {
+    public function setWifi() {
         return $this->wifi;
     }
 
-    public function setPrix()
-    {
+    public function setPrix() {
         return $this->prix;
     }
 
-    public function setHotel()
-    {
+    public function setHotel() {
         return $this->hotel;
     }
 
+    public function __toString() {
+        
+    }
 }
