@@ -106,7 +106,7 @@ class Hotel {
 
     public function afficherInfoHotel() {
 
-        echo " <div style='font-size : 15px ;  margin: 20px 0 10px 0 ;'>";
+        echo " <div style='font-size : 15px ;  margin: 10px 0 0 0 ;'>";
 
         echo "<h2> {$this->nom} {$this-> ville}  </h2>";
 
@@ -123,9 +123,9 @@ class Hotel {
 
     public function afficherInfoReservation() {
 
-        echo " <div style='font-size : 15px ;  margin: 20px 0 10px 0 ;'>";
+        echo " <div style='font-size : 15px ;  margin: 10px 0 0px 0 ;'>";
     
-        echo "<h2>Réservations de l'hôtel {$this->nom} {$this->ville}</h2>";
+        echo "<h2> Réservations de l'hôtel {$this->nom} {$this->ville}</h2>";
     
         echo " </div>";
     
@@ -137,7 +137,7 @@ class Hotel {
     
             echo " </div>";
     
-            echo "<div style='margin-top: 15px;'>";
+            echo "<div style='margin-top: 20px;'>";
             
             foreach ($this->reservations as $reservation) {
                 
