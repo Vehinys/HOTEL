@@ -6,15 +6,18 @@ class Chambre {
     private string $nombreDeLit;
     private bool $wifi;
     private string $prix;
-    private hotel $hotel;
+    private Hotel $hotel;
 
-    function __construct(string $numeroDeChambre, string $nombreDeLit, bool $wifi, string $prix)
+    function __construct(string $numeroDeChambre, string $nombreDeLit, bool $wifi, string $prix, Hotel $hotel)
     {
         $this-> numeroDeChambre = $numeroDeChambre; 
         $this-> nombreDeLit = $nombreDeLit;
         $this-> wifi = $wifi;
         $this-> prix = $prix;
+        $this-> hotel = $hotel;
         $this-> hotel -> addChambre ($this);
+        $this-> hotel -> calculChambre ($this);
+
     }
 
     // GET 

@@ -22,6 +22,9 @@ class Hotel {
     public function addChambre($chambre) {                                         
         $this->chambres[] = $chambre;                                                  
     }
+    public function calculChambre($chambre) {                                         
+        $this->chambres[] = $chambre;                                                  
+    }
 
     // GET 
 
@@ -80,7 +83,7 @@ class Hotel {
     public function afficherInfoHotel() {
 
         echo "<h2> {$this->nom} {$this-> ville}  </h2>";
-        echo "{$this-> adresse} {$this-> codePostale}  {$this-> ville}<br>";
+        echo "{$this-> adresse} {$this-> codePostale}  {$this-> ville}<br><br>";
 
         echo "Nombre de chambres : <br>";
         echo "Nombre de chambres reservées : {$this-> nombreDeChambreReserv} <br>";
