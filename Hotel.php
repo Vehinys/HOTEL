@@ -16,6 +16,7 @@ class Hotel {
         $this-> codePostale = $codePostale;
         $this-> ville = $ville;
         $this-> nombreDeChambreReserv = $nombreDeChambreReserv;
+        $this-> chambres = [];
     }
 
     public function addChambre($chambre) {                                         
