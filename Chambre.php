@@ -1,6 +1,6 @@
 <?php
 
-class Chambre {                                                                         // CREE UNE CLASS APPELE "PAYS" ET VONT STOCKER LES ATTRIBUTS DANS LA CLASS "PAYS"
+class Chambre {                                                                         
 
     private string $numeroDeChambre; 
     private string $nombreDeLit;

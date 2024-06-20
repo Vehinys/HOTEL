@@ -1,7 +1,7 @@
 <?php
 
-class Hotel {                                                                         // CREE UNE CLASS APPELE "PAYS" ET VONT STOCKER LES ATTRIBUTS DANS LA CLASS "PAYS"
-
+class Hotel {                                                                         
+    
     private string $nom; 
     private string $adresse;
     private int $codePostale;

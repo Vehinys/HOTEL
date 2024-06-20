@@ -1,6 +1,6 @@
 <?php
 
-class Reserver {                                                                         // CREE UNE CLASS APPELE "PAYS" ET VONT STOCKER LES ATTRIBUTS DANS LA CLASS "PAYS"
+class Reserver {                                                                         
 
     private DateTime $dateArrivee; 
     private DateTime $dateDepart;
