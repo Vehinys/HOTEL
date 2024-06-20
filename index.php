@@ -15,7 +15,6 @@ $hotel2 = new Hotel("Regent &#9733;&#9733;&#9733;&#9733;","61 rue Dauphine","750
 // AFFICHAGE 1
 
 $hotel1->afficherInfoHotel();
-$hotel2->afficherInfoHotel();
 
 // CREATION DES CHAMBRES
 
@@ -47,5 +46,3 @@ $chambre20 = new Chambre("Chambre : 20" , "2 Lits"," Oui","300 €", $hotel2);
 $chambre18 = new Chambre("Chambre : 18" , "2 Lits"," Oui","300 €", $hotel2);
 $chambre19 = new Chambre("Chambre : 19" , "2 Lits"," Oui","300 €", $hotel2);
 $chambre20 = new Chambre("Chambre : 19" , "2 Lits"," Oui","300 €", $hotel2);
-
-var_dump(count($hotel1));

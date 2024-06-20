@@ -17,7 +17,6 @@ class Chambre {
         $this-> hotel = $hotel;
         $this-> hotel -> addChambre ($this);
         $this-> hotel -> calculChambre ($this);
-
     }
 
     // GET 

@@ -22,10 +22,10 @@ class Hotel {
     public function addChambre($chambre) {                                         
         $this->chambres[] = $chambre;                                                  
     }
+    
     public function calculChambre($chambre) {                                         
-        $this->chambres[] = $chambre;                                                  
+        return count($this->$chambre);                                                  
     }
-
     // GET 
 
     public function getNom()
