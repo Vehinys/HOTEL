@@ -91,7 +91,7 @@ class Hotel {
         echo "<b>Réservation de l'hôtel {$this->nom} {$this-> ville}</b>";
         echo " </div>";
 
-        echo " <div style=' width : 120px ;padding: 5px 5px ; background-color : green; color : white;'>";
+        echo " <div style=' width : 120px ;padding: 5px 5px ; background-color : #32d296; color : white;'>";
         echo " RESERVATIONS ";
         echo " </div>";
     }
@@ -102,7 +102,7 @@ class Hotel {
     //     echo "<b>Réservation de l'hôtel {$this->nom} {$this-> ville}</b>";
     //     echo " </div>";
 
-    //     echo " <div style=' width : 120px ;padding: 5px 5px ; background-color : green; color : white;'>";
+    //     echo " <div style=' width : 120px ;padding: 5px 5px ; background-color : #32d296; color : white;'>";
     //     echo " RESERVATIONS ";
     //     echo " </div>";
 
