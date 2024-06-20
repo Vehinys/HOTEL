@@ -8,7 +8,7 @@ class Hotel {                                                                   
     private string $ville;
     private int $nombreDeChambreReserv;
 
-    function __construct(string $nom, string $adresse, int $codePostale, string $ville, int $nombreDeChambreReserv, )
+    function __construct(string $nom, string $adresse, int $codePostale, string $ville, int $nombreDeChambreReserv)
     {
         $this-> nom = $nom; 
         $this-> adresse = $adresse;
