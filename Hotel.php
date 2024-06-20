@@ -76,11 +76,13 @@ class Hotel {
 
 
     public function afficherInfoHotel() {
-
+        echo " <div style='font-size : 20px ;  margin: 20px 0 10px 0 ;'>";
         echo "<h2> {$this->nom} {$this-> ville}  </h2>";
         echo "{$this-> adresse} {$this-> codePostale}  {$this-> ville}<br><br>";
-        echo "Nombre de chambres : {$this->chambres}" ; 
-        echo "Nombre de chambres disponibles :  0 chambres.<br>";
+        echo "Nombre total de chambres : {$this->calculNbChambres()}<br>" ;
+        echo "Nombre de chambres réservées :  0<br>"; 
+        echo "Nombre de chambres disponibles :  0<br>";
+        echo " </div>";
     }
 
 

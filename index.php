@@ -60,6 +60,3 @@ $hotel1->afficherInfoHotel();
 // // AFFICHAGE 3
 
 // $hotel1->afficherInfoReservation2();
-
-
-var_dump($hotel1->calculNbChambres());
