@@ -85,22 +85,16 @@ class Hotel {
         echo " </div>";
     }
 
+    public function afficherInfoReservation() {
 
+        echo " <div style='font-size : 20px ;  margin: 20px 0 10px 0 ;'>";
+        echo "<b>Réservation de l'hôtel {$this->nom} {$this-> ville}</b>";
+        echo " </div>";
 
-
-    // public function afficherInfoReservation() {
-
-    //     echo " <div style='font-size : 20px ;  margin: 20px 0 10px 0 ;'>";
-    //     echo "<b>Réservation de l'hôtel {$this->nom} {$this-> ville}</b>";
-    //     echo " </div>";
-
-    //     echo " <div style=' width : 120px ;padding: 5px 5px ; background-color : green; color : white;'>";
-    //     echo " RESERVATIONS ";
-    //     echo " </div>";
-
-    // }
-
-
+        echo " <div style=' width : 120px ;padding: 5px 5px ; background-color : green; color : white;'>";
+        echo " RESERVATIONS ";
+        echo " </div>";
+    }
 
     // public function afficherInfoReservation2() {
 

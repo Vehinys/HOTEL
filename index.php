@@ -52,10 +52,10 @@ $client2 = new Client("Micka","MURMANN",$hotel1,$chambre5);
 
 $hotel1->afficherInfoHotel();
 
-// AFFICHAGE 2
+//AFFICHAGE 2
 
-// $hotel1->afficherInfoReservation();
-// $hotel2->afficherInfoReservation();
+$hotel1->afficherInfoReservation();
+$hotel2->afficherInfoReservation();
 
 // // AFFICHAGE 3
 
