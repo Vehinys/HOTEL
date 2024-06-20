@@ -6,19 +6,20 @@ class Chambre {
     private string $nombreDeLit;
     private bool   $wifi;
     private string $prix;
+    private bool   $reserver;
     private Hotel  $hotel;
 
 
-    function __construct(string $nomChambre, string $nombreDeLit, bool $wifi, string $prix, Hotel $hotel) {
+    function __construct(string $nomChambre, string $nombreDeLit, bool $wifi, string $prix, Hotel $hotel, bool $reserve = false) {
 
         $this  -> nomChambre  = $nomChambre; 
         $this  -> nombreDeLit = $nombreDeLit;
         $this  -> wifi        = $wifi;
         $this  -> prix        = $prix;
         $this  -> hotel       = $hotel;
+        $this  -> reserver    = $reserve;
         $hotel -> addChambre($this);
     }
-
 
     // GET 
 
@@ -31,7 +32,11 @@ class Chambre {
     }
 
     public function getWifi() {
-        return $this->wifi;
+        if ($this->wifi == true) {
+            return "<span uk-icon='rss'></span>";
+        } else if ($this->wifi == false) {
+            return null; 
+        }
     }
 
     public function getPrix() {
@@ -40,6 +45,10 @@ class Chambre {
 
     public function getHotel() {
         return $this->hotel;
+    }
+
+    public function getReserver() {
+        return $this->reserver;
     }
 
     // SET 
@@ -62,6 +71,10 @@ class Chambre {
 
     public function setHotel() {
         return $this->hotel;
+    }
+
+    public function setReserver() {
+        return $this->reserver;
     }
 
     public function __toString() {

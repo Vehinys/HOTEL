@@ -4,14 +4,18 @@ class Client {
 
     private string $nom; 
     private string $prenom;
-    private Hotel  $hotel;
+    private hotel $hotel;
 
 
-    function __construct(string $nom, string $prenom, hotel $hotel)
-    {
-        $this-> nom    = $nom; 
-        $this-> prenom = $prenom;
-        $this-> hotel  = $hotel;
+
+
+    function __construct(string $nom, string $prenom, hotel $hotel) {
+        $this-> nom          = $nom; 
+        $this-> prenom       = $prenom;
+        $this-> hotel        = $hotel;
+
+        $hotel -> addClient($this);
+
     }
 
     // GET 
@@ -30,7 +34,7 @@ class Client {
     {
         return $this->hotel;
     }
-    
+
     // SET 
 
     public function setNom()
