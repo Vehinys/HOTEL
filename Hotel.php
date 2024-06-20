@@ -10,8 +10,8 @@ class Hotel {
     private        $chambres = [];
 
 
-    function __construct(string $nom, string $adresse, int $codePostale, string $ville, int $nombreDeChambreReserv)
-    {
+    function __construct(string $nom, string $adresse, int $codePostale, string $ville, int $nombreDeChambreReserv) {
+
         $this-> nom                   = $nom; 
         $this-> adresse               = $adresse;
         $this-> codePostale           = $codePostale;
@@ -85,10 +85,14 @@ class Hotel {
 
         echo "<h2> {$this->nom} {$this-> ville}  </h2>";
         echo "{$this-> adresse} {$this-> codePostale}  {$this-> ville}<br><br>";
-
+        
         echo "Nombre de chambres : 0 chambres.<br>"; 
         echo "Nombre de chambres reservées : {$this-> nombreDeChambreReserv} chambres.<br>";
         echo "Nombre de chambres disponibles :  0 chambres.<br>";
 
+        foreach ($this->chambres as $chambre) {
+            echo "";
+        }
     }
+
 }

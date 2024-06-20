@@ -27,19 +27,19 @@ $chambre3  = new Chambre("Chambre : 3"  , "2 Lits"," Non","120 €", $hotel1);
 $chambre4  = new Chambre("Chambre : 4"  , "2 Lits"," Non","120 €", $hotel1);
 $chambre5  = new Chambre("Chambre : 5"  , "2 Lits"," Non","120 €", $hotel1);
 
-$chambre6  = new Chambre("Chambre : 6"  , "2 Lits"," Non","300 €", $hotel1);
-$chambre7  = new Chambre("Chambre : 7"  , "2 Lits"," Non","300 €", $hotel1);
-$chambre8  = new Chambre("Chambre : 8"  , "2 Lits"," Non","300 €", $hotel1);
-$chambre9  = new Chambre("Chambre : 9"  , "2 Lits"," Non","300 €", $hotel1);
+$chambre6  = new Chambre("Chambre : 6"  , "2 Lits"," Oui","300 €", $hotel1);
+$chambre7  = new Chambre("Chambre : 7"  , "2 Lits"," oui","300 €", $hotel1);
+$chambre8  = new Chambre("Chambre : 8"  , "2 Lits"," Oui","300 €", $hotel1);
+$chambre9  = new Chambre("Chambre : 9"  , "2 Lits"," Oui","300 €", $hotel1);
 $chambre10 = new Chambre("Chambre : 10" , "2 Lits"," Oui","300 €", $hotel1);
 
 // HOTEL 2
 
-$chambre11 = new Chambre("Chambre : 11" , "2 Lits"," Oui","120 €", $hotel2);
-$chambre12 = new Chambre("Chambre : 12" , "2 Lits"," Oui","120 €", $hotel2);
-$chambre13 = new Chambre("Chambre : 13" , "2 Lits"," Oui","120 €", $hotel2);
-$chambre14 = new Chambre("Chambre : 14" , "2 Lits"," Oui","120 €", $hotel2);
-$chambre15 = new Chambre("Chambre : 15" , "2 Lits"," Oui","120 €", $hotel2);
+$chambre11 = new Chambre("Chambre : 11" , "2 Lits"," Non","120 €", $hotel2);
+$chambre12 = new Chambre("Chambre : 12" , "2 Lits"," Non","120 €", $hotel2);
+$chambre13 = new Chambre("Chambre : 13" , "2 Lits"," Non","120 €", $hotel2);
+$chambre14 = new Chambre("Chambre : 14" , "2 Lits"," Non","120 €", $hotel2);
+$chambre15 = new Chambre("Chambre : 15" , "2 Lits"," Non","120 €", $hotel2);
 
 $chambre16 = new Chambre("Chambre : 16" , "2 Lits"," Oui","300 €", $hotel2);
 $chambre17 = new Chambre("Chambre : 17" , "2 Lits"," Oui","300 €", $hotel2);
