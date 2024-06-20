@@ -1,12 +1,13 @@
 <?php
 
 class Hotel {                                                                         
-    
+
     private string $nom; 
     private string $adresse;
     private int $codePostale;
     private string $ville;
     private int $nombreDeChambreReserv;
+    private $chambres = [];
 
     function __construct(string $nom, string $adresse, int $codePostale, string $ville, int $nombreDeChambreReserv)
     {
@@ -15,6 +16,10 @@ class Hotel {
         $this-> codePostale = $codePostale;
         $this-> ville = $ville;
         $this-> nombreDeChambreReserv = $nombreDeChambreReserv;
+    }
+
+    public function addChambre($chambre) {                                         
+        $this->chambres[] = $chambre;                                                  
     }
 
     // GET 
@@ -71,4 +76,14 @@ class Hotel {
         return $this->nombreDeChambreReserv;
     }
 
+    public function afficherInfoHotel() {
+
+        echo "<h2> {$this->nom} {$this-> ville}  </h2>";
+        echo "{$this-> adresse} {$this-> codePostale}  {$this-> ville}<br>";
+
+        echo "Nombre de chambres : <br>";
+        echo "Nombre de chambres reservées : {$this-> nombreDeChambreReserv} <br>";
+        echo "Nombre de chambres dispo :  <br>";
+
+    }
 }
