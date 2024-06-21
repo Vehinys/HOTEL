@@ -201,20 +201,3 @@ class Hotel {
         echo "<h2 style='margin: 0;'>Status des Chambres {$this->nom} {$this->ville}</h2>";
         echo "</div>";
     }
-
-    public function afficherChambres() {
-        echo "<table class='demo'>";
-        echo "<thead><tr><th>CHAMBRE</th><th>PRIX</th><th>WIFI</th><th>ETAT</th></tr></thead>";
-        echo "<tbody>";
-        foreach ($this->chambres as $chambre) {
-            echo "<tr>";
-            echo "<td>{$chambre->getNomChambre()}</td>";
-            echo "<td>{$chambre->getPrix()} €</td>";
-            echo "<td>" . ($chambre->getWifi() ? 'Oui' : 'Non') . "</td>";
-            echo "<td>" . ($chambre->estReservee() ? 'Réservée' : 'Disponible') . "</td>";
-            echo "</tr>";
-        }
-        echo "</tbody>";
-        echo "</table>";
-    }
-}
