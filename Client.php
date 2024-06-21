@@ -4,16 +4,16 @@ class Client {
 
     private string $nom; 
     private string $prenom;
-    private hotel $hotel;
-    private array $reseverations;
+    private hotel  $hotel;
+    private array  $reseverations;
 
 
 
 
     function __construct(string $nom, string $prenom, hotel $hotel) {
-        $this-> nom          = $nom; 
-        $this-> prenom       = $prenom;
-        $this-> hotel        = $hotel;
+        $this-> nom           = $nom; 
+        $this-> prenom        = $prenom;
+        $this-> hotel         = $hotel;
         $this-> reservations  = [];
         $hotel -> addClient($this);
 
@@ -25,40 +25,33 @@ class Client {
 
     // GET 
 
-    public function getNom()
-    {
+    public function getNom() {
         return $this->nom;
     }
 
-    public function getPrenom()
-    {
+    public function getPrenom() {
         return $this->prenom;
     }
 
-    public function getHotel()
-    {
+    public function getHotel() {
         return $this->hotel;
     }
 
-    public function getReservation()
-    {
+    public function getReservation() {
         return $this->reservation;
     }
 
     // SET 
 
-    public function setNom()
-    {
+    public function setNom() {
         return $this->nom;
     }
 
-    public function setPrenom()
-    {
+    public function setPrenom() {
         return $this->prenom;
     }
 
-    public function setHotel()
-    {
+    public function setHotel() {
         return $this->hotel;
     }
 

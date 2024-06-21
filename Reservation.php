@@ -1,13 +1,14 @@
 <?php
 
 class Reservation {
-    private string $dateArrivee;
-    private string $dateDepart;
-    private Client $client;
+    private string  $dateArrivee;
+    private string  $dateDepart;
+    private Client  $client;
     private Chambre $chambre;
     private $nbNuits; 
 
     public function __construct(Client $client, Chambre $chambre, string $dateArrivee, string $dateDepart, $nbNuits = null) {
+        
         $this->client       = $client;
         $this->chambre      = $chambre;
         $this->dateArrivee  = $dateArrivee;
@@ -63,7 +64,6 @@ class Reservation {
         $dateDepart = new DateTime($this->dateDepart);
         return $dateDepart->diff($dateArrivee)->days;
     }
-
 
     // SET 
 
