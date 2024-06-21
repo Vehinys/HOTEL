@@ -70,33 +70,6 @@ $hotel1->afficherInfoReserClient($client2);
 // AFFICHAGE 4 
 $hotel1->afficherInfoStatut();
 
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-	.demo {
-		border:1px solide #C0C0C0;
-		border-collapse:effondrer;
-		padding:5px;
-	}
-	.demo th {
-		border:1px solide #C0C0C0;
-		padding:5px;
-		background:#F0F0F0;
-	}
-	.demo td {
-		border:1px solide #C0C0C0;
-		padding:5px;
-		background:#FFFFFF;
-	}
-</style>
-</head>
-<body>
 
 
 
