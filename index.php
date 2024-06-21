@@ -67,4 +67,9 @@ $hotel2->afficherInfoReservation();
 
 $hotel1->afficherInfoReserClient($client2);
 
+// AFFICHAGE 4 
+
+$hotel1->afficherInfoStatut();
+
+
 

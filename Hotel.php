@@ -168,7 +168,15 @@ class Hotel {
                 $hotel = $chambre->getHotel();
                 echo "<b>{$hotel->getNom()} {$hotel->getVille()} / </b>";
                 echo "Chambre : {$chambre->getNomChambre()} ";
-                echo "({$chambre->getNombreDeLit()} lits - {$chambre->getPrix()} € - Wifi :  ) ";
+                echo "( {$chambre->getNombreDeLit()} lits - {$chambre->getPrix()} €";
+
+                if ($chambre->getWifi()) {
+                    echo " - Oui";
+                } else {
+                    echo " - Non";
+                }
+
+                echo " ) ";
                 echo "du {$reservation->getDateArrivee()} au {$reservation->getDateDepart()}<br>";
             }
             $totalPrix = 0;
@@ -179,6 +187,41 @@ class Hotel {
         } else {
             echo "Aucune réservation !<br>";
         }
+        echo "</div><br>";
+    }
+
+    public function afficherInfoStatut() {
+        echo "<div style='font-size: 15px;'>";
+        echo "<h2 style='margin : 0;'>  Status des Chambres {$this->nom} {$this->ville}</h2>";
         echo "</div>";
+    }
+
+    public function getStatut() {
+        $result = "<h5>Statut des chambres de <strong>{$this->nom} {$this->ville}</strong></h5>";
+        $result .= "<table class='uk-table uk-table-striped'>";
+        $result .= "<thead>
+                        <tr>
+                            <th>CHAMBRE</th>
+                            <th>PRIX</th>
+                            <th>WIFI</th>
+                            <th>ETAT</th>
+                        </tr>
+                    </thead>";
+        $result .= "<tbody>";
+    
+        foreach ($this->chambres as $chambre) {
+            $result .= "<tr>";
+            $result .= "<td>{$chambre->getNomChambre()}</td>";
+            $result .= "<td>{$chambre->getPrix()} €</td>";
+            $result .= "<td>" . ($chambre->getWifi() ? "Oui" : "Non") . "</td>";
+            // Ajoutez ici la logique pour l'état de la chambre en fonction des réservations, par exemple
+            $result .= "<td>État à définir</td>"; // Vous devez remplacer cette ligne par la logique appropriée
+            $result .= "</tr>";
+        }
+    
+        $result .= "</tbody>";
+        $result .= "</table>";
+    
+        return $result;
     }
 }
