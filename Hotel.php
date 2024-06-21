@@ -168,12 +168,12 @@ class Hotel {
                 $hotel = $chambre->getHotel();
                 echo "<b>{$hotel->getNom()} {$hotel->getVille()} / </b>";
                 echo "Chambre : {$chambre->getNomChambre()} ";
-                echo "( {$chambre->getNombreDeLit()} lits - {$chambre->getPrix()} €";
-
+                echo "( {$chambre->getNombreDeLit()} lits - {$chambre->getPrix()} €" ;
+                echo " - Wifi : " ;
                 if ($chambre->getWifi()) {
-                    echo " - Oui";
+                    echo " Oui";
                 } else {
-                    echo " - Non";
+                    echo " Non";
                 }
 
                 echo " ) ";
