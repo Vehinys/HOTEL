@@ -146,7 +146,8 @@ class Hotel {
 
                 echo " <div style='font-size : 15px;'>";
 
-                echo "{$client->getNom()} {$client->getPrenom()} - Chambre {$chambre->getNomChambre()} - </>";
+                echo "{$client->getNom()} {$client->getPrenom()} - Chambre {$chambre->getNomChambre()} - du 
+                {$reservation->getDateArrivee()} au {$reservation->getDateDepart()}</>";
 
                 echo " </div>";
 
@@ -164,5 +165,7 @@ class Hotel {
 
         }
     }
+
+    public function afficherInfoReserClient() {
 
 }
