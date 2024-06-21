@@ -30,6 +30,7 @@ $ch6Hilton   = new Chambre(6, 2, false, 120, $hotel1);
 $ch7Hilton   = new Chambre(7, 2, false, 120, $hotel1);
 $ch8Hilton   = new Chambre(8, 2, false, 120, $hotel1);
 $ch9Hilton   = new Chambre(9, 2, false, 120, $hotel1);
+
 $ch10Hilton  = new Chambre(10, 2, true, 300, $hotel1);
 $ch11Hilton  = new Chambre(11, 2, true, 300, $hotel1);
 $ch12Hilton  = new Chambre(12, 2, true, 300, $hotel1);
@@ -41,11 +42,12 @@ $ch1Reng     = new Chambre(1, 2, false, 120, $hotel2);
 $ch3Reng     = new Chambre(2, 2, false, 120, $hotel2);
 $ch2Reng     = new Chambre(3, 2, false, 120, $hotel2);
 $ch4Reng     = new Chambre(4, 2, false, 120, $hotel2);
-$ch5Reng     = new Chambre(5, 2, false, 300, $hotel2);
-$ch6Reng     = new Chambre(6, 2, false, 300, $hotel2);
-$ch7Reng     = new Chambre(7, 2, false, 300, $hotel2);
-$ch8Reng     = new Chambre(8, 2, false, 300, $hotel2);
-$ch9Reng     = new Chambre(9, 2, false, 300, $hotel2);
+
+$ch5Reng     = new Chambre(5, 2, true, 300, $hotel2);
+$ch6Reng     = new Chambre(6, 2, true, 300, $hotel2);
+$ch7Reng     = new Chambre(7, 2, true, 300, $hotel2);
+$ch8Reng     = new Chambre(8, 2, true, 300, $hotel2);
+$ch9Reng     = new Chambre(9, 2, true, 300, $hotel2);
 
 
 $Reserver1   = new Reservation($client1, $ch1Hilton, "01-02-2021", "02-01-2021");
@@ -65,13 +67,13 @@ $hotel2->afficherInfoReservation();
 
 // AFFICHAGE 3
 
+
 $hotel1->afficherInfoReserClient($client2);
+
 
 // AFFICHAGE 4 
 $hotel1->afficherInfoStatut();
-
 $hotel1->afficherTableau();
-
 
 
 

@@ -58,7 +58,7 @@ class Hotel {
         $nbReservations = count($clientReservations);
 
         
-        echo "<div style='width: 90px; padding: 5px 5px; background-color: #32d296; margin: 0 0 20px 0; color: white;'>";
+        echo "<div style='width: 100px; padding: 5px 5px; background-color: #32d296; margin: 0 0 20px 0; color: white;'>";
         
         echo "{$nbReservations} Réservations";
         
@@ -161,7 +161,7 @@ class Hotel {
         
         if ($this->nbReservations() > 0) {
             
-            echo " <div style='width : 90px; padding: 5px 5px; background-color : #32d296; color : white;'>";
+            echo " <div style='width : 100px; padding: 5px 5px; background-color : #32d296; color : white;'>";
             
             echo "{$this->nbReservations()} Réservations";
             
@@ -267,41 +267,47 @@ class Hotel {
 
     public function afficherTableau() {
         echo "<div>";
-        echo "<table style='width: 40%;text-align: center;'>";
+        echo "<style>";
+        echo "tr.chambre-row:hover {";
+        echo "    background-color: coral;";
+        echo "}";
+        echo "td.etat-cell {";
+        echo "    border-bottom: 1px solid #ddd;";
+        echo "    color: white;";
+        echo "}";
+        echo "</style>";
+        echo "<table style='width: 40%; text-align: center;'>";
         echo "<thead style='text-align: center;'>";
         echo "<tr>";
-        echo "<th style=''>CHAMBRE</th>";
-        echo "<th style=''>PRIX</th>";
-        echo "<th style=''>WIFI</th>";
-        echo "<th style=''>ETAT</th>";
+        echo "<th>CHAMBRE</th>";
+        echo "<th>PRIX</th>";
+        echo "<th>WIFI</th>";
+        echo "<th>ETAT</th>";
         echo "</tr>";
         echo "</thead>";
         echo "<tbody>";
     
-        $rowCount = 0;
         foreach ($this->chambres as $chambre) {
             $estReservee = $this->estChambreReservee($chambre);
             $etat = $estReservee ? 'Réservée' : 'Disponible';
-            $wifi = $chambre->getWifi() ? 'Oui' : 'Non';
+            $wifiIcon = $chambre->getWifi();
     
             // Détermination de la couleur de fond pour la colonne ETAT
             $etatStyle = $estReservee ? 'background-color: red;' : 'background-color: green;';
     
-            echo "<tr>";
+            echo "<tr class='chambre-row'>";
             echo "<td style='border-bottom: 1px solid #ddd;'>Chambre {$chambre->getNomChambre()}</td>";
             echo "<td style='border-bottom: 1px solid #ddd;'>{$chambre->getPrix()}€</td>";
-            echo "<td style='border-bottom: 1px solid #ddd;'>{$wifi}</td>";
-            echo "<td style='color:white; {$etatStyle}'>{$etat}</td>";
+            echo "<td style='border-bottom: 1px solid #ddd;'>{$wifiIcon}</td>";
+            echo "<td class='etat-cell' style='{$etatStyle}'>{$etat}</td>";
             echo "</tr>";
-    
-            $rowCount++;
         }
     
         echo "</tbody>";
         echo "</table>";
         echo "</div>";
     }
-    
+
     private function estChambreReservee(Chambre $chambre) {
         foreach ($this->reservations as $reservation) {
             if ($reservation->getChambre() === $chambre) {
@@ -311,5 +317,4 @@ class Hotel {
         return false;
     }
     
-
 }

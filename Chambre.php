@@ -32,12 +32,9 @@ class Chambre {
     }
 
     public function getWifi() {
-        if ($this->wifi) {
-            return "<span uk-icon='wifi'></span>"; // Icône Wifi activé
-        } else {
-            return "Non"; // Wifi désactivé
-        }
+        return $this->wifi ? "🛜" : '❌';
     }
+    
 
     public function getPrix() {
         return $this->prix;
