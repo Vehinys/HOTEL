@@ -49,8 +49,8 @@ $ch9Reng     = new Chambre(9, 2, false, 300, $hotel2);
 
 
 $Reserver1   = new Reservation($client1, $ch1Hilton, "01-02-2021", "02-01-2021");
-$Reserver2   = new Reservation($client2, $ch4Hilton, "11-03-2021", "15-03-2021");
-$Reserver3   = new Reservation($client2, $ch9Hilton, "01-01-2021", "17-01-2021");
+$Reserver2   = new Reservation($client2, $ch10Hilton, "01-01-2021", "03-01-2021");
+$Reserver3   = new Reservation($client2, $ch4Hilton, "11-03-2021", "25-03-2021");
 
 // AFFICHAGE 1
 

@@ -5,13 +5,14 @@ class Reservation {
     private string $dateDepart;
     private Client $client;
     private Chambre $chambre;
+    private $nbNuits; 
 
-
-    public function __construct(Client $client, Chambre $chambre, string $dateArrivee, string $dateDepart) {
+    public function __construct(Client $client, Chambre $chambre, string $dateArrivee, string $dateDepart, $nbNuits = null) {
         $this->client       = $client;
         $this->chambre      = $chambre;
         $this->dateArrivee  = $dateArrivee;
         $this->dateDepart   = $dateDepart;
+        $this->nbNuits      = $nbNuits;
         $chambre->getHotel()->addReservation($this);
 
     }
@@ -35,51 +36,48 @@ class Reservation {
         echo "Nombre de réservations: {$this->getNombreReservations()}";
     }
 
-    public function NbNuits() {
-
-        $dateArrivee = new DateTime($this->dateArrivee);
-        $dateDepart = new DateTime($this->dateDepart);
-        return $dateDepart->diff($dateArrivee)->days;
-        
-    }
-
     // GET 
 
-    public function getDateArrivee()
-    {
+    public function getDateArrivee() {
         return $this->dateArrivee;
     }
 
-    public function getDateDepart()
-    {
+    public function getDateDepart() {
         return $this->dateDepart;
     }
 
-    public function getClient()
-    {
+    public function getClient() {
         return $this->client;
     }
 
-    public function getChambre()
-    {
+    public function getChambre() {
         return $this->chambre;
     }
 
-    public function getReservation()
-    {
+    public function getReservation() {
         return $this->reservation;
     }
-    
+
+    public function getNbNuits() {
+        $dateArrivee = new DateTime($this->dateArrivee);
+        $dateDepart = new DateTime($this->dateDepart);
+        return $dateDepart->diff($dateArrivee)->days;
+    }
+
+
     // SET 
 
-    public function setDateArrivee()
-    {
+    public function setDateArrivee() {
         return $this->dateArrivee;
     }
 
-    public function setDateDepart()
-    {
+    public function setDateDepart() {
         return $this->dateDepart;
     }
+
+    public function setNbNuits() {
+        return $this->nbNuits;
+    }
+
 
 }

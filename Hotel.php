@@ -56,18 +56,17 @@ class Hotel {
         echo "{$nbReservations} Réservations";
         echo "</div>";
     }
+
+
     public function resultPrix() {
         $totalPrix = 0;
-    
         foreach ($this->reservations as $reservation) {
             $nbNuits = $reservation->getNbNuits();
             $prixParNuit = $reservation->getChambre()->getPrix();
             $totalPrix += $nbNuits * $prixParNuit;
         }
-    
         return $totalPrix;
     }
-
 
     // GET 
 
@@ -140,9 +139,7 @@ class Hotel {
             echo "{$this->nbReservations()} Réservations";
             echo " </div>";
             echo "<div style='margin-top: 20px;'>";
-
             foreach ($this->reservations as $reservation) {
-            
                 $client = $reservation->getClient();
                 $chambre = $reservation->getChambre();
                 echo " <div style='font-size : 15px;'>";
@@ -165,17 +162,15 @@ class Hotel {
         $clientReservations = array_filter($this->reservations, function($reservation) use ($client) {
             return $reservation->getClient() === $client;
         });
-    
         if (count($clientReservations) > 0) {
             foreach ($clientReservations as $reservation) {
                 $chambre = $reservation->getChambre();
                 $hotel = $chambre->getHotel();
                 echo "<b>{$hotel->getNom()} {$hotel->getVille()} / </b>";
                 echo "Chambre : {$chambre->getNomChambre()} ";
-                echo "({$chambre->getNombreDeLit()} lits - {$chambre->getPrix()} € - ) ";
+                echo "({$chambre->getNombreDeLit()} lits - {$chambre->getPrix()} € - Wifi :  ) ";
                 echo "du {$reservation->getDateArrivee()} au {$reservation->getDateDepart()}<br>";
             }
-            // Calcul du prix total des réservations du client
             $totalPrix = 0;
             foreach ($clientReservations as $reservation) {
                 $totalPrix += $reservation->getChambre()->getPrix();
