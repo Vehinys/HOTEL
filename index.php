@@ -53,7 +53,7 @@ $Reserver2   = new Reservation($client2, $ch10Hilton, "01-01-2021", "03-01-2021"
 $Reserver3   = new Reservation($client2, $ch4Hilton, "11-03-2021", "25-03-2021");
 
 // AFFICHAGE 1
-
+echo "<div>";
 $hotel1->afficherInfoHotel();
 // $hotel2->afficherInfoHotel();
 
@@ -70,6 +70,7 @@ $hotel1->afficherInfoReserClient($client2);
 // AFFICHAGE 4 
 $hotel1->afficherInfoStatut();
 
+$hotel1->afficherTableau();
 
 
 
