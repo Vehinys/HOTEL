@@ -7,7 +7,7 @@ include 'Client.php';
 include 'Hotel.php';
 include 'Reservation.php';
 
-// CREATION DE L'HOTEL AVEC LE NOMBRE DES CHAMBRES + LEURS ETATS
+// CREATION DES HOTELS AVEC LES ADRESSES ET NOMBRE D ETOILE
 
 $hotel1 = new Hotel("Hilton &#9733;&#9733;&#9733;&#9733;","10 route de la Gare","67000","Strasbourg");
 $hotel2 = new Hotel("Regent &#9733;&#9733;&#9733;&#9733;","61 rue Dauphine","75006","Paris"); 
@@ -55,21 +55,16 @@ $Reserver2   = new Reservation($client2, $ch10Hilton, "01-01-2021", "03-01-2021"
 $Reserver3   = new Reservation($client2, $ch4Hilton, "11-03-2021", "25-03-2021");
 
 // AFFICHAGE 1
-echo "<div>";
+
 $hotel1->afficherInfoHotel();
 // $hotel2->afficherInfoHotel();
 
 // AFFICHAGE 2
-
 $hotel1->afficherInfoReservation();
-
 $hotel2->afficherInfoReservation();
 
 // AFFICHAGE 3
-
-
 $hotel1->afficherInfoReserClient($client2);
-
 
 // AFFICHAGE 4 
 $hotel1->afficherInfoStatut();
