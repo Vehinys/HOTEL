@@ -100,16 +100,16 @@ class Hotel {
         return $this->ville;
     }
 
-    public function getChambre() {
-        return $this->chambre;
+    public function getChambres() {
+        return $this->chambres;
     }
 
-    public function getReservation() {
-        return $this->reservation;
+    public function getReservations() {
+        return $this->reservations;
     }
 
-    public function getClient() {
-        return $this->client;
+    public function getClients() {
+        return $this->clients;
     }
     
     // SET 
